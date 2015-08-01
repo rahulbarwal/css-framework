@@ -1,0 +1,155 @@
+/*
+Buttons are to be in following format for them to be in  the view you are getting in demo
+	<button class="button">
+		<label class = "circle_in_button"></label>
+		<span>Submit</span>
+	</button>
+*/
+
+
+.button{
+	cursor : pointer;
+	border: 1px solid transparent;
+	border-radius: 3px;
+	box-shadow: 0px 0px 5px #fff;	
+}
+
+.button:hover{
+	background-color: #fff;
+	box-shadow: 0px 0px 5px #000;
+}
+
+.button .circle_in_button{
+	display: inline-block;
+	height: 10px;
+	width: 10px;
+	border: 1px solid trnasparent;
+	border-radius: 50%;
+	background-color: #4C9ED9;
+	box-shadow: 0px 0px 5px #fff;
+	background-color: rgba(0, 0, 0, 0.42);
+	animation : circle_to_pointed  0.5s 0s linear 1 reverse;
+	-webkit-animation : circle_to_pointed  0.5s 0s linear 1 reverse;
+}
+
+.button:hover .circle_in_button{
+    border: 1px solid trnasparent;
+	animation : circle_to_pointed  0.5s 0s linear 1 normal forwards;
+	-webkit-animation : circle_to_pointed  0.5s 0s linear 1 normal forwards;
+}
+
+@keyframes circle_to_pointed{
+	0%{	
+	}
+	100%{
+		border-radius: 50% 0% 50% 50%;
+		transform: rotate(45deg);
+	}
+}
+
+@-webkit-keyframes circle_to_pointed{
+	0%{
+	}
+	100%{
+		border-radius: 50% 0% 50% 50%;
+		transform: rotate(45deg);
+	}
+}
+
+.button>span{
+	margin-left: 5px;
+}
+
+
+.disabled{
+	cursor: not-allowed;
+}
+
+.warning{
+	background-color: #FF6666;
+    	color: #fff;
+}
+
+.warning .circle_in_button{
+	background-color: #FF6666;
+}
+
+.warning:hover{
+	color: #FF6666;
+	box-shadow: 0px 0px 5px #FF6666;
+}
+
+.warning.disabled{
+	background-color: rgba(230, 46, 0, 0.51);
+    	color: #fff;
+    	box-shadow: none;
+}
+
+.danger{
+    	background-color: #BF3833;
+	color: #fff;
+}
+
+.danger .circle_in_button{
+    	background-color: #BF3833; 
+}
+
+.danger:hover{
+    	color: #BF3833; 
+	box-shadow: 0px 0px 5px #BF3833;
+}
+
+.danger.disabled{
+	background-color: rgba(191, 56, 51, 0.58);
+    	color: #fff;
+    	box-shadow: none;
+}
+
+.success{
+	background-color: #13A17D;
+    	color: #fff;
+}
+
+.success .circle_in_button{
+	background-color: #13A17D;
+}
+
+.success:hover{
+	color: #13A17D;
+	box-shadow: 0px 0px 5px #13A17D;
+}
+
+.success.disabled{
+	background-color: rgba(19, 161, 125, 0.6);
+    	color: #fff;
+    	box-shadow: none;
+}
+ 
+.info{
+	background-color: rgb(29, 131, 218);
+  	color: #fff;
+}
+
+.info .circle_in_button{
+	background-color: rgb(29, 131, 218);
+}
+
+.info:hover{
+	color: rgb(29, 131, 218);
+	box-shadow: 0px 0px 5px rgb(29, 131, 218);
+}
+
+.info.disabled{
+	background-color: rgba(29, 131, 218, 0.59);
+    	color: #fff;
+    	box-shadow: none;
+}
+
+.normal{
+		padding: 5px ;
+}
+
+.large{
+		padding: 10px ;
+}
+
